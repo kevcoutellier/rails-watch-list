@@ -1,0 +1,13 @@
+<%= simple_form_for @bookmark do |f| %>
+  <%= f.input :title %>
+  <%= f.input :comment %>
+  <%= f.button :submit %>
+<% end %>
+
+
+
+
+<%= link_to "Delete",
+  bookmark_path(@bookmark),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
